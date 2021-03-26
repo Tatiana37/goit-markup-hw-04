@@ -105,7 +105,41 @@ body {
   margin-left: 30px;
   margin-top: 30px;
 }
+.list .social-icons{
+  margin-top: 16px;
+}
 
+.social-icons{
+  display: inline-flex;
+  }
+
+.social-icons-item + .social-icons-item{
+  margin-left: 10px;
+}
+
+.social-icons-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  /* background-color:#757575 ; */
+}
+.social-icons .icon{
+  width: 20px;
+  height: 20px;
+  fill:  #AFB1B8
+}
+
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-color);
+}
+.social-icons-link:hover .icon,
+.social-icons-link:focus .icon{
+  fill:var(--dark-bg-text-color);
+}
 
 /* шапка */
 .menu {
@@ -254,6 +288,31 @@ color: var(--title-color);
 .accent-item{
   max-width: 270px;
 }
+
+.accent-item::before{
+  display: block;
+  content: "";
+  height: 120px;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #F5F4FA;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.icon-antenna::before{
+  background-image: url(../images/icons/antenna.svg);
+  }
+.icon-clock::before{
+  background-image: url(../images/icons/clock.svg);
+  }
+.icon-diagram::before{
+  background-image: url(../images/icons/diagram.svg);
+}
+.icon-astronaut::before{
+  background-image: url(../images/icons/astronaut.svg);
+}
+
 .accent-paragraph{
   margin-top: 0;
   margin-bottom: 0;
@@ -304,10 +363,12 @@ color: var(--title-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   --grid-item: 4;
+  text-align: center;
 }
 .team{
   padding-top: 30px;
   padding-bottom: 30px;
+  
 }
 .block {
   padding-top: 94px;
