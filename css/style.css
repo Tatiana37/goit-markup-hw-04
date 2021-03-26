@@ -182,7 +182,7 @@ color: var(--title-color);
 .site-nav .link,
 .auth-nav .link{
   
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -194,6 +194,22 @@ color: var(--title-color);
 .auth-nav .item + .item{
   margin-left: 50px;
 }
+.contacts-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+ 
+ .icon{
+   margin-right: 10px;
+   fill: var(--main-text-color) ;
+ }
+
+ .link:hover .icon,
+ .link:focus .icon{
+   fill: var(--accent-color)
+ }
+ 
 .frame{
   border-bottom: #ECECEC solid 1px ;
 }
